@@ -13,7 +13,7 @@ local_proxy = FastMCP.as_proxy(
                 "--client-type",
                 "persistent",
                 "--data-dir",
-                "/Users/egorkolds/chroma-data",
+                "/home/egor/data/chroma-data",
             ],
         )
     ),

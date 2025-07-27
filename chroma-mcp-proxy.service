@@ -1,0 +1,16 @@
+[Unit]
+Description=Chroma MCP Proxy Server
+After=network.target
+
+[Service]
+Type=simple
+User=egor
+Group=egor
+WorkingDirectory=/home/egor/code/chroma-mcp-proxy
+Environment="PATH=/home/egor/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+ExecStart=/home/egor/.local/bin/uv run python proxy_server.py
+Restart=always
+RestartSec=10
+
+[Install]
+WantedBy=multi-user.target
